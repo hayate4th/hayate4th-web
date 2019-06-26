@@ -1,12 +1,10 @@
 import React from 'react';
 import './App.css';
-import LocaleRadioButton from './components/LocaleRadioButton';
 import logo from './logo.svg';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <LocaleRadioButton leftLanguage="日本語" rightLanguage="English" />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
