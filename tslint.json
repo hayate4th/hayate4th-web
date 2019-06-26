@@ -1,0 +1,22 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended",
+        "tslint-react",
+        "tslint-config-prettier"
+    ],
+    "jsRules": {},
+    "rules": {
+        "prettier": [
+            true,
+            {
+                "singleQuote": true
+            }
+        ],
+        "quotemark": [true, "single", "jsx-double"],
+        "no-console": false,
+        "interface-name": false,
+        "indent": [true, "spaces", 2]
+    },
+    "rulesDirectory": ["tslint-plugin-prettier"]
+}
