@@ -1,0 +1,11 @@
+header {
+  height: 80px;
+  padding: 10px;
+}
+
+.locale-selector {
+  /* localeProps の数に依存 
+  80px × localePropsのlength) */
+  width: 160px;
+  margin: 0 0 0 auto;
+}
