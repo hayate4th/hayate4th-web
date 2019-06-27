@@ -1,10 +1,24 @@
 import React from 'react';
 import './App.css';
+import LocaleSelector from './components/LocaleSelector';
 import logo from './logo.svg';
 
 const App: React.FC = () => {
+  const localeProps = [
+    {
+      isChecked: true,
+      localeLabelText: '日本語',
+      localeValue: 'ja'
+    },
+    {
+      localeLabelText: 'English',
+      localeValue: 'en'
+    }
+  ];
+
   return (
     <div className="App">
+      <LocaleSelector localeProps={localeProps} />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

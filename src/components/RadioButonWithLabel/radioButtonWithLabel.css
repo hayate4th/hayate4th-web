@@ -1,0 +1,23 @@
+input {
+	display: none;
+}
+
+label{
+	display: block;
+	float: left;
+	cursor: pointer;
+	width: 60px;
+	margin: 0;
+	padding: 10px;
+	background: #bdc3c7;
+	color: #869198;
+	font-size: 16px;
+	text-align: center;
+	line-height: 1;
+	transition: .2s;
+}
+
+input[type="radio"]:checked + label {
+	background-color: #a1b91d;
+	color: #fff;
+}
