@@ -1,5 +1,5 @@
 import React from 'react';
-import RadioButtonWithLabel from './RadioButtonWithLabel';
+import RadioButtonWithLabel from '../RadioButonWithLabel';
 
 const LocaleSelector: React.FC<{}> = () => {
   return (
