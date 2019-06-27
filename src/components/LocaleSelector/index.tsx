@@ -1,14 +1,9 @@
 import React from 'react';
-import RadioButtonWithLabel from '../RadioButonWithLabel';
-
-interface LocaleProps {
-  localeValue: string;
-  localeLabelText: string;
-  defaultChecked?: boolean;
-}
+import { IndividualRadioButtonWithLabelProps } from '../RadioButonWithLabel';
+import RadioButtonWithLabelGroup from '../RadioButtonWithLabelGroup';
 
 export interface LocaleSelectorProps {
-  localeProps: LocaleProps[];
+  localeProps: IndividualRadioButtonWithLabelProps[];
 }
 
 const LocaleSelector: React.FC<LocaleSelectorProps> = props => {
@@ -20,17 +15,10 @@ const LocaleSelector: React.FC<LocaleSelectorProps> = props => {
         console.log(event.target.value)
       }
     >
-      {localeProps.map((value: LocaleProps, key: number) => {
-        return (
-          <RadioButtonWithLabel
-            key={key}
-            inputName="locale"
-            inputValue={value.localeValue}
-            labelText={value.localeLabelText}
-            defaultChecked={value.defaultChecked}
-          />
-        );
-      })}
+      <RadioButtonWithLabelGroup
+        inputGroupName="locale"
+        individualRadioButtonWithLabelGroupProps={localeProps}
+      />
     </div>
   );
 };
