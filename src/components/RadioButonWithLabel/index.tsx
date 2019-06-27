@@ -4,12 +4,12 @@ import './radioButtonWithLabel.css';
 export interface RadioButtonWithLabelProps {
   inputName: string;
   inputValue: string;
-  isChecked?: boolean;
+  defaultChecked?: boolean;
   labelText: string;
 }
 
 const RadioButtonWithLabel: React.FC<RadioButtonWithLabelProps> = props => {
-  const { inputName, inputValue, isChecked, labelText } = props;
+  const { inputName, inputValue, defaultChecked, labelText } = props;
 
   return (
     <Fragment>
@@ -17,7 +17,7 @@ const RadioButtonWithLabel: React.FC<RadioButtonWithLabelProps> = props => {
         type="radio"
         name={inputName}
         value={inputValue}
-        checked={isChecked}
+        checked={defaultChecked}
       />
       <label>{labelText}</label>
     </Fragment>

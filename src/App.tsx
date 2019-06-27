@@ -6,7 +6,7 @@ import logo from './logo.svg';
 const App: React.FC = () => {
   const localeProps = [
     {
-      isChecked: true,
+      defaultChecked: true,
       localeLabelText: '日本語',
       localeValue: 'ja'
     },

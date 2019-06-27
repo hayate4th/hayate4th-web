@@ -4,7 +4,7 @@ import RadioButtonWithLabel from '../RadioButonWithLabel';
 interface LocaleProps {
   localeValue: string;
   localeLabelText: string;
-  isChecked?: boolean;
+  defaultChecked?: boolean;
 }
 
 export interface LocaleSelectorProps {
@@ -23,7 +23,7 @@ const LocaleSelector: React.FC<LocaleSelectorProps> = props => {
             inputName="locale"
             inputValue={value.localeValue}
             labelText={value.localeLabelText}
-            isChecked={value.isChecked}
+            defaultChecked={value.defaultChecked}
           />
         );
       })}
