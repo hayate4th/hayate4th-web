@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import RadioButtonWithLabel from '../RadioButonWithLabel';
 
 interface LocaleProps {
@@ -15,7 +15,11 @@ const LocaleSelector: React.FC<LocaleSelectorProps> = props => {
   const { localeProps } = props;
 
   return (
-    <Fragment>
+    <div
+      onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+        console.log(event.target.value)
+      }
+    >
       {localeProps.map((value: LocaleProps, key: number) => {
         return (
           <RadioButtonWithLabel
@@ -27,7 +31,7 @@ const LocaleSelector: React.FC<LocaleSelectorProps> = props => {
           />
         );
       })}
-    </Fragment>
+    </div>
   );
 };
 
