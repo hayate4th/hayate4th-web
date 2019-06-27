@@ -1,5 +1,5 @@
 import React from 'react';
-import RadioButtonWithLabel from '../RadioButonWithLabel';
+import RadioButtonWithLabelGroup from '../RadioButtonWithLabelGroup'
 
 interface LocaleProps {
   localeValue: string;

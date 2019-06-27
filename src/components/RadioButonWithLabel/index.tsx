@@ -1,6 +1,14 @@
 import React, { Fragment } from 'react';
-import RadioButton, { RadioButtonProps } from '../RadioButton';
+import RadioButton, {
+  IndividualRadioButtonProps,
+  RadioButtonProps
+} from '../RadioButton';
 import './radioButtonWithLabel.css';
+
+export interface IndividualRadioButtonWithLabelProps
+  extends IndividualRadioButtonProps {
+  labelText: string;
+}
 
 export interface RadioButtonWithLabelProps extends RadioButtonProps {
   labelText: string;
