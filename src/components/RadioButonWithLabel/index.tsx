@@ -10,16 +10,18 @@ export interface RadioButtonWithLabelProps {
 
 const RadioButtonWithLabel: React.FC<RadioButtonWithLabelProps> = props => {
   const { inputName, inputValue, defaultChecked, labelText } = props;
+  const inputId = inputName + '_' + inputValue;
 
   return (
     <Fragment>
       <input
+        id={inputId}
         type="radio"
         name={inputName}
         value={inputValue}
-        checked={defaultChecked}
+        defaultChecked={defaultChecked}
       />
-      <label>{labelText}</label>
+      <label htmlFor={inputId}>{labelText}</label>
     </Fragment>
   );
 };
