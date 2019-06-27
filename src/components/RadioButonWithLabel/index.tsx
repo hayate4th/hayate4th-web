@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import RadioButton from '../RadioButton';
 import './radioButtonWithLabel.css';
 
 export interface RadioButtonWithLabelProps {
@@ -14,11 +15,10 @@ const RadioButtonWithLabel: React.FC<RadioButtonWithLabelProps> = props => {
 
   return (
     <Fragment>
-      <input
-        id={inputId}
-        type="radio"
-        name={inputName}
-        value={inputValue}
+      <RadioButton
+        inputId={inputId}
+        inputName={inputName}
+        inputValue={inputValue}
         defaultChecked={defaultChecked}
       />
       <label htmlFor={inputId}>{labelText}</label>
