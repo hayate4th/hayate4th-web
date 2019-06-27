@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import LocaleSelector from './components/LocaleSelector';
 
 const App: React.FC = () => {
