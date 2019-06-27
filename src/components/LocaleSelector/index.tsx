@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import RadioButtonWithLabel from '../RadioButonWithLabel';
 
-const LocaleSelector: React.FC<{}> = () => {
+interface LocaleProps {
+  localeValue: string;
+  localeLabelText: string;
+  isChecked?: boolean;
+}
+
+export interface LocaleSelectorProps {
+  localeProps: LocaleProps[];
+}
+
+const LocaleSelector: React.FC<LocaleSelectorProps> = () => {
   return (
     <div>
       <RadioButtonWithLabel
