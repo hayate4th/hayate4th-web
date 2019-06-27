@@ -11,21 +11,23 @@ export interface LocaleSelectorProps {
   localeProps: LocaleProps[];
 }
 
-const LocaleSelector: React.FC<LocaleSelectorProps> = () => {
+const LocaleSelector: React.FC<LocaleSelectorProps> = props => {
+  const { localeProps } = props;
+
   return (
-    <div>
-      <RadioButtonWithLabel
-        inputName="locale"
-        inputValue="ja"
-        isChecked={true}
-        labelText="日本語"
-      />
-      <RadioButtonWithLabel
-        inputName="locale"
-        inputValue="en"
-        labelText="English"
-      />
-    </div>
+    <Fragment>
+      {localeProps.map((value: LocaleProps, key: number) => {
+        return (
+          <RadioButtonWithLabel
+            key={key}
+            inputName="locale"
+            inputValue={value.localeValue}
+            labelText={value.localeLabelText}
+            isChecked={value.isChecked}
+          />
+        );
+      })}
+    </Fragment>
   );
 };
 
