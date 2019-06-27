@@ -3,7 +3,7 @@ import RadioButton, {
   IndividualRadioButtonProps,
   RadioButtonProps
 } from '../RadioButton';
-import './radioButtonWithLabel.css';
+import './style.css';
 
 export interface IndividualRadioButtonWithLabelProps
   extends IndividualRadioButtonProps {

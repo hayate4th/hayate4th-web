@@ -6,12 +6,12 @@ const App: React.FC = () => {
   const localeProps = [
     {
       defaultChecked: true,
-      localeLabelText: '日本語',
-      localeValue: 'ja'
+      inputValue: 'ja',
+      labelText: '日本語'
     },
     {
-      localeLabelText: 'English',
-      localeValue: 'en'
+      inputValue: 'en',
+      labelText: 'English'
     }
   ];
 

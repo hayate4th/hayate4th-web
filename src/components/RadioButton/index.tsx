@@ -1,13 +1,13 @@
 import React from 'react';
-// import './RadioButton.css';
+import './style.css';
 
 export interface IndividualRadioButtonProps {
-  inputId: string;
   inputValue: string;
   defaultChecked?: boolean;
 }
 
 export interface RadioButtonProps extends IndividualRadioButtonProps {
+  inputId: string;
   inputName: string;
 }
 
