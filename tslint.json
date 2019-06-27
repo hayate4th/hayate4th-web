@@ -16,7 +16,8 @@
         "quotemark": [true, "single", "jsx-double"],
         "no-console": false,
         "interface-name": false,
-        "indent": [true, "spaces", 2]
+        "indent": [true, "spaces", 2],
+        "jsx-no-lambda": false
     },
     "rulesDirectory": ["tslint-plugin-prettier"]
 }
