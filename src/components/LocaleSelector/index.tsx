@@ -11,6 +11,7 @@ const LocaleSelector: React.FC<LocaleSelectorProps> = props => {
 
   return (
     <div
+      className="locale-selector"
       onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
         console.log(event.target.value)
       }
