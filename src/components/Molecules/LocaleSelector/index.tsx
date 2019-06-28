@@ -1,5 +1,5 @@
 import React from 'react';
-import { IndividualRadioButtonProps } from '../RadioButon';
+import { IndividualRadioButtonProps } from '../../Atoms/RadioButon';
 import RadioButtonGroup from '../RadioButtonGroup';
 
 export interface LocaleSelectorProps {

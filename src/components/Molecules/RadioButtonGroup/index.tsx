@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react';
-import RadioButton, { IndividualRadioButtonProps } from '../RadioButon';
+import RadioButton, {
+  IndividualRadioButtonProps
+} from '../../Atoms/RadioButon';
 
 export interface RadioButtonGroupProps {
   inputGroupName: string;

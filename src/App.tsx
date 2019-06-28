@@ -1,8 +1,8 @@
 import anime from 'animejs';
 import React, { useState } from 'react';
 import './App.css';
-import Header from './components/Header';
-import RoundIcon from './components/RoundIcon';
+import RoundIcon from './components/Atoms/RoundIcon';
+import Header from './components/Organisms/Header';
 import logo from './images/hayate4th.jpg';
 
 const App: React.FC = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import LocaleSelector from '../LocaleSelector';
+import LocaleSelector from '../../Molecules/LocaleSelector';
 import './style.css';
 
 const Header: React.FC = () => {
