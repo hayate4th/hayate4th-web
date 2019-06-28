@@ -5,10 +5,11 @@ export interface SquareIconProps {
   urlString: string;
   width: number;
   height: number;
+  refFunction?: (ref: HTMLImageElement | null) => any;
 }
 
 const SquareIcon: React.FC<SquareIconProps> = props => {
-  const { altString, urlString, width, height } = props;
+  const { altString, urlString, width, height, refFunction } = props;
 
   return (
     <img
@@ -17,6 +18,7 @@ const SquareIcon: React.FC<SquareIconProps> = props => {
       alt={altString}
       width={width}
       height={height}
+      ref={refFunction}
     />
   );
 };
