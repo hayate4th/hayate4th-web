@@ -1,0 +1,6 @@
+.locale-selector {
+  /* localeProps の数に依存 
+  80px × localePropsのlength) */
+  width: 160px;
+  height: 36px;
+}

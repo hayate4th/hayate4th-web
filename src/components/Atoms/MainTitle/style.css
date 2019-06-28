@@ -1,0 +1,10 @@
+h1 {
+    font-weight: 900;
+    font-size: 3.5em;
+}
+
+.letter {
+    display: inline-block;
+    line-height: 1em;
+    opacity: 0;
+}
