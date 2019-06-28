@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 import Header from './components/Header';
 import RoundIcon from './components/RoundIcon';
 import logo from './images/hayate4th.jpg';
