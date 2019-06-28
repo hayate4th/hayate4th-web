@@ -11,16 +11,14 @@ const MainTitle: React.FC<MainTitleProps> = props => {
 
   return (
     <h1 ref={refFunction}>
-      <span className="text-wrapper">
-        <span className="letters">
-          {titleText.split('').map((value: string, key: number) => {
-            return (
-              <span key={key} className="letter">
-                {value}
-              </span>
-            );
-          })}
-        </span>
+      <span className="letters">
+        {titleText.split('').map((value: string, key: number) => {
+          return (
+            <span key={key} className="letter">
+              {value}
+            </span>
+          );
+        })}
       </span>
     </h1>
   );
