@@ -19,7 +19,7 @@ const App: React.FC = () => {
         height={300}
         refFunction={ref => {
           anime({
-            duration: 1500,
+            duration: 3000,
             targets: ref,
             translateX: [windowWidth, 0]
           });
