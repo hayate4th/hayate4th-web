@@ -6,7 +6,7 @@ import RoundIcon from './components/RoundIcon';
 import logo from './images/hayate4th.jpg';
 
 const App: React.FC = () => {
-  // TODO: window.innerWidth はいつの段階で決まるのか調べる
+  // window オブジェクトはクライアントサイド JavaScript が起動するタイミングで自動的に生成される
   const [windowWidth] = useState(window.innerHeight);
 
   return (
