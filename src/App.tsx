@@ -6,7 +6,8 @@ import RoundIcon from './components/RoundIcon';
 import logo from './images/hayate4th.jpg';
 
 const App: React.FC = () => {
-  const [windowWidth] = useState(window.innerWidth);
+  // TODO: window.innerWidth はいつの段階で決まるのか調べる
+  const [windowWidth] = useState(window.innerHeight);
 
   return (
     <div className="App">
