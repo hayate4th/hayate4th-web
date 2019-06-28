@@ -6,10 +6,11 @@ export interface RoundIconProps {
   urlString: string;
   width: number;
   height: number;
+  refFunction?: (ref: HTMLImageElement | null) => any;
 }
 
 const RoundIcon: React.FC<RoundIconProps> = props => {
-  const { altString, urlString, width, height } = props;
+  const { altString, urlString, width, height, refFunction } = props;
 
   return (
     <img
@@ -18,6 +19,7 @@ const RoundIcon: React.FC<RoundIconProps> = props => {
       alt={altString}
       width={width}
       height={height}
+      ref={refFunction}
     />
   );
 };
