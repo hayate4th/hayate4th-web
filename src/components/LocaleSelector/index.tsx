@@ -1,9 +1,9 @@
 import React from 'react';
-import { IndividualRadioButtonWithLabelProps } from '../RadioButonWithLabel';
-import RadioButtonWithLabelGroup from '../RadioButtonWithLabelGroup';
+import { IndividualRadioButtonProps } from '../RadioButon';
+import RadioButtonGroup from '../RadioButtonGroup';
 
 export interface LocaleSelectorProps {
-  localeProps: IndividualRadioButtonWithLabelProps[];
+  localeProps: IndividualRadioButtonProps[];
 }
 
 const LocaleSelector: React.FC<LocaleSelectorProps> = props => {
@@ -16,9 +16,9 @@ const LocaleSelector: React.FC<LocaleSelectorProps> = props => {
         console.log(event.target.value)
       }
     >
-      <RadioButtonWithLabelGroup
+      <RadioButtonGroup
         inputGroupName="locale"
-        individualRadioButtonWithLabelGroupProps={localeProps}
+        individualRadioButtonProps={localeProps}
       />
     </div>
   );

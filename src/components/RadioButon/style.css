@@ -1,3 +1,7 @@
+input {
+	display: none;
+}
+
 label{
 	display: block;
 	float: left;
