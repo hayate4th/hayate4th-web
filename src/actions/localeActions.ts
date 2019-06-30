@@ -2,6 +2,6 @@ import actionCreatorFactory from 'typescript-fsa';
 
 const actionCreator = actionCreatorFactory();
 
-export const localeAction = {
+export const localeActions = {
   updateLocale: actionCreator<string>('ACTIONS_UPDATE_LOCALE')
 };
