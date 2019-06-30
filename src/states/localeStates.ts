@@ -2,16 +2,16 @@ import { reducerWithInitialState } from 'typescript-fsa-reducers';
 import { localeActions } from '../actions/localeActions';
 
 export interface LocaleState {
-  currentLocale: string;
+  locale: string;
 }
 
 const initialState: LocaleState = {
-  currentLocale: 'ja'
+  locale: 'ja'
 };
 
-export const LocaleReducer = reducerWithInitialState(initialState).case(
+export const localeReducer = reducerWithInitialState(initialState).case(
   localeActions.updateLocale,
-  (state, currentLocale) => {
-    return Object.assign({}, state, { currentLocale });
+  (state, locale) => {
+    return Object.assign({}, state, { locale });
   }
 );
