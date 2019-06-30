@@ -1,5 +1,6 @@
 import anime from 'animejs';
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import logo from '../../../images/hayate4th.jpg';
 import MainTitle from '../../Atoms/MainTitle';
 import RoundIcon from '../../Atoms/RoundIcon';
@@ -8,7 +9,9 @@ import './style.css';
 
 const Header: React.FC = () => {
   // window オブジェクトはクライアントサイド JavaScript が起動するタイミングで自動的に生成される
+  const { t } = useTranslation();
   const [windowWidth] = useState(window.innerWidth);
+
   const localeProps = [
     {
       defaultChecked: true,
@@ -51,7 +54,7 @@ const Header: React.FC = () => {
           width={300}
           height={300}
         />
-        <MainTitle titleText="hayate4thの部屋" />
+        <MainTitle titleText={t('Main Title')} />
       </div>
     </header>
   );
