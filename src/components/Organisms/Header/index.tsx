@@ -25,6 +25,8 @@ const Header: React.FC = () => {
   ];
 
   useEffect(() => {
+    // TODO: .letter の opacity が1になってるから一旦0に戻す必要がある
+
     anime({
       duration: 3000,
       opacity: 1,
