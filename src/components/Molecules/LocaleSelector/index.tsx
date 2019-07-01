@@ -8,6 +8,7 @@ import { LocaleState } from '../../../states/localeStates';
 import { AppState } from '../../../store';
 import { IndividualRadioButtonProps } from '../../Atoms/RadioButon';
 import RadioButtonGroup from '../RadioButtonGroup';
+import './style.css';
 
 export interface LocaleActions {
   updateLocale: (v: string) => Action<string>;
@@ -26,6 +27,8 @@ const LocaleSelector: React.FC<LocaleSelectorProps> = props => {
       // TODO: 別の書き方を探したい
       className={'locale-selector ' + locale}
       onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+        // TODO: updateLocale が意味をなしていない
+        // updateLocale が Promise を返して、success の時 payload の値を使って i18n.changeLanguage をすべき
         updateLocale(event.target.value);
         // TODO: 確実に updateLocale が完了してから changeLanguage するようにする
         i18n.changeLanguage(event.target.value);
