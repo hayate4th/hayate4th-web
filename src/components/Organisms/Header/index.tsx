@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import logo from '../../../images/hayate4th.jpg';
 import MainTitle from '../../Atoms/MainTitle';
 import RoundIcon from '../../Atoms/RoundIcon';
-import LocaleSelector from '../../Molecules/LocaleSelector';
+import ConnectLocaleSelector from '../../Molecules/ConnectLocaleSelector';
 import './style.css';
 
 const Header: React.FC = () => {
@@ -12,6 +12,7 @@ const Header: React.FC = () => {
   const { t } = useTranslation();
   const [windowWidth] = useState(window.innerWidth);
 
+  // TODO: 外部ファイルに置くのか検討すべき
   const localeProps = [
     {
       defaultChecked: true,
@@ -25,7 +26,9 @@ const Header: React.FC = () => {
   ];
 
   useEffect(() => {
-    // TODO: .letter の opacity が1になってるから一旦0に戻す必要がある
+    // TODO: .letter の opacity を 0 に戻す
+
+    // RoundIcon に対するアニメーション
     anime({
       duration: 3000,
       opacity: 1,
@@ -33,6 +36,7 @@ const Header: React.FC = () => {
       translateX: [windowWidth, 0]
     });
 
+    // MainTitle に対するアニメーション
     anime({
       delay: (_, i) => {
         return 150 * (i + 1);
@@ -47,7 +51,7 @@ const Header: React.FC = () => {
 
   return (
     <header>
-      <LocaleSelector localeProps={localeProps} />
+      <ConnectLocaleSelector localeProps={localeProps} />
       <div className="horizontal-list">
         <RoundIcon
           urlString={logo}

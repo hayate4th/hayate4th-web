@@ -1,18 +1,10 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { connect } from 'react-redux';
-import { Dispatch } from 'redux';
-import { Action } from 'typescript-fsa';
-import { localeActions } from '../../../actions/localeActions';
 import { LocaleState } from '../../../states/localeStates';
-import { AppState } from '../../../store';
 import { IndividualRadioButtonProps } from '../../Atoms/RadioButon';
+import { LocaleActions } from '../ConnectLocaleSelector';
 import RadioButtonGroup from '../RadioButtonGroup';
 import './style.css';
-
-export interface LocaleActions {
-  updateLocale: (v: string) => Action<string>;
-}
 
 export interface LocaleSelectorProps extends LocaleState, LocaleActions {
   localeProps: IndividualRadioButtonProps[];
@@ -42,17 +34,4 @@ const LocaleSelector: React.FC<LocaleSelectorProps> = props => {
   );
 };
 
-const mapDispatchToProps = (dispatch: Dispatch<Action<string>>) => {
-  return {
-    updateLocale: (v: string) => dispatch(localeActions.updateLocale(v))
-  };
-};
-
-const mapStateToProps = (appState: AppState) => {
-  return Object.assign({}, appState.locale);
-};
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(LocaleSelector);
+export default LocaleSelector;
