@@ -36,7 +36,11 @@ i18n.use(initReactI18next).init({
                 "Work Experience NN Intern": "NN Life Insurance",
                 "Work Experience NN Intern Position and Period": "Internship (Software development and Data science), 2018 Oct - 2019 Mar",
                 "Work Experience Cybozu": "Cybozu, Inc.",
-                "Work Experience Cybozu Position and Period": "Engineer (Progammer) 2019 Apr -"
+                "Work Experience Cybozu Position and Period": "Engineer (Progammer) 2019 Apr -",
+                "Contact Title": "Contact",
+                "Contact twitter Icon altString": "Twitter logo",
+                "Contact github Icon altString": "GitHub logo",
+                "Contact linkedIn Icon altString": "linkedIn logo"
 
             }
         },
@@ -66,7 +70,11 @@ i18n.use(initReactI18next).init({
                 "Work Experience NN Intern": "エヌエヌ生命保険株式会社",
                 "Work Experience NN Intern Position and Period": "インターンシップ (ソフトウェア開発 & データサイエンス), 2018.10 - 2019.03",
                 "Work Experience Cybozu": "サイボウズ株式会社",
-                "Work Experience Cybozu Position and Period": "エンジニア (プログラマ) 2019.04 -"
+                "Work Experience Cybozu Position and Period": "エンジニア (プログラマ) 2019.04 -",
+                "Contact Title": "連絡先",
+                "Contact twitter Icon altString": "ツイッターのロゴ",
+                "Contact github Icon altString": "GitHub のロゴ",
+                "Contact linkedIn Icon altString": "linkedIn のロゴ"
             }
         }
     }
