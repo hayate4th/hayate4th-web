@@ -1,18 +1,19 @@
 import React from 'react';
-import Card, { CardProps } from '../Card';
+import Card, { CardProps } from '../../Atoms/Card';
+import './style.css';
 
 export interface ListCardProps extends CardProps {
-  infoList: string[];
+  listItems: string[];
 }
 
 const ListCard: React.FC<ListCardProps> = props => {
-  const { cardTitle, infoList } = props;
+  const { cardTitle, listItems } = props;
 
   return (
     <Card cardTitle={cardTitle}>
       <ul>
-        {infoList.map((value: string, key: number) => {
-          return <li key={key}>{value}</li>;
+        {listItems.map((listItem: string, key: number) => {
+          return <li key={key}>{listItem}</li>;
         })}
       </ul>
     </Card>
