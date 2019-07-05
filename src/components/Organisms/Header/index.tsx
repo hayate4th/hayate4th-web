@@ -33,6 +33,7 @@ const Header: React.FC = () => {
   //   });
   // }
 
+  // 一番最初のレンダリング後のみアニメーションを実行するため第二引数に空配列を渡す
   useEffect(() => {
     // RoundIcon に対するアニメーション
     anime({
@@ -53,7 +54,7 @@ const Header: React.FC = () => {
       opacity: [0, 1],
       targets: '.letter'
     });
-  });
+  }, []);
 
   return (
     <header>
