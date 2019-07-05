@@ -1,0 +1,7 @@
+a {
+  margin: 0 20px 0 0;
+}
+
+a:last-of-type {
+  margin: 0;
+}
