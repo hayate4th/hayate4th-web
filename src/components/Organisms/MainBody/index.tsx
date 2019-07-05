@@ -1,7 +1,10 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import githubMark from '../../../images/github.png';
+import linkedInMark from '../../../images/linkedin.png';
+import twitterMark from '../../../images/twitter.png';
 import DescriptionListCard from '../../Molecules/DescriptionListCard';
-import ListCard from '../../Molecules/ListCard';
+import IconLinkListCard from '../../Molecules/IconLinkListCard';
 import './style.css';
 
 const Body: React.FC = () => {
@@ -9,6 +12,38 @@ const Body: React.FC = () => {
 
   return (
     <main>
+      <IconLinkListCard
+        cardTitle={t('Contact Title')}
+        iconLinkListItems={[
+          {
+            iconLink: 'https://twitter.com/hayate4th',
+            iconProps: {
+              altString: t('Contact twitter Icon altString'),
+              height: 75,
+              urlString: twitterMark,
+              width: 75
+            }
+          },
+          {
+            iconLink: 'https://github.com/hayate4th',
+            iconProps: {
+              altString: t('Contact github Icon altString'),
+              height: 75,
+              urlString: githubMark,
+              width: 75
+            }
+          },
+          {
+            iconLink: 'https://www.linkedin.com/in/ryotaro-nakagawa-1077ba180',
+            iconProps: {
+              altString: t('Contact linkedIn Icon altString'),
+              height: 75,
+              urlString: linkedInMark,
+              width: 75
+            }
+          }
+        ]}
+      />
       <DescriptionListCard
         cardTitle={t('Work Experience Title')}
         descriptionListItems={[
@@ -62,18 +97,6 @@ const Body: React.FC = () => {
             dtText: t('Education Graduate Period')
           }
         ]}
-      />
-      <ListCard
-        cardTitle={t('Card Title') + '3'}
-        listItems={['hoge', 'fuga', 'piyo']}
-      />
-      <ListCard
-        cardTitle={t('Card Title') + '4'}
-        listItems={['hoge', 'fuga', 'piyo']}
-      />
-      <ListCard
-        cardTitle={t('Card Title') + '5'}
-        listItems={['hoge', 'fuga', 'piyo']}
       />
     </main>
   );
