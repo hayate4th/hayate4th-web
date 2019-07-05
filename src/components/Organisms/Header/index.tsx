@@ -25,9 +25,15 @@ const Header: React.FC = () => {
     }
   ];
 
-  useEffect(() => {
-    // TODO: .letter の opacity を 0 に戻す
+  // TODO: .letter の opacity を 0 に戻す (思った以上に難しい)
+  // const letterSpanList = document.getElementsByClassName('letter');
+  // if (letterSpanList.length > 0) {
+  //   Array.from(letterSpanList).forEach(letterSpan => {
+  //     letterSpan.setAttribute('style', 'opacity: 0;');
+  //   });
+  // }
 
+  useEffect(() => {
     // RoundIcon に対するアニメーション
     anime({
       duration: 3000,
