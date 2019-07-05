@@ -9,7 +9,7 @@ const Card: React.FC<CardProps> = props => {
 
   return (
     <div>
-      <h1>{cardTitle}</h1>
+      <h2>{cardTitle}</h2>
       {children}
     </div>
   );
