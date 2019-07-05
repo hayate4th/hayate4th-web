@@ -1,6 +1,6 @@
 import React from 'react';
 
-export interface SquareIconProps {
+export interface IconProps {
   altString: string;
   urlString: string;
   width: number;
@@ -8,7 +8,7 @@ export interface SquareIconProps {
   refFunction?: (ref: HTMLImageElement | null) => any;
 }
 
-const SquareIcon: React.FC<SquareIconProps> = props => {
+const Icon: React.FC<IconProps> = props => {
   const { altString, urlString, width, height, refFunction } = props;
 
   return (
@@ -23,4 +23,4 @@ const SquareIcon: React.FC<SquareIconProps> = props => {
   );
 };
 
-export default SquareIcon;
+export default Icon;

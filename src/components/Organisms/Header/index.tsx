@@ -38,7 +38,7 @@ const Header: React.FC = () => {
     anime({
       duration: 3000,
       opacity: 1,
-      targets: '.round-icon',
+      targets: 'header .round-icon',
       translateX: [windowWidth, 0]
     });
 
