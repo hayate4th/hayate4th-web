@@ -1,5 +1,4 @@
-import anime from 'animejs';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import logo from '../../../images/hayate4th.jpg';
 import MainTitle from '../../Atoms/MainTitle';
@@ -24,37 +23,6 @@ const Header: React.FC = () => {
       labelText: 'English'
     }
   ];
-
-  // TODO: .letter の opacity を 0 に戻す (思った以上に難しい)
-  // const letterSpanList = document.getElementsByClassName('letter');
-  // if (letterSpanList.length > 0) {
-  //   Array.from(letterSpanList).forEach(letterSpan => {
-  //     letterSpan.setAttribute('style', 'opacity: 0;');
-  //   });
-  // }
-
-  // 一番最初のレンダリング後のみアニメーションを実行するため第二引数に空配列を渡す
-  useEffect(() => {
-    // RoundIcon に対するアニメーション
-    anime({
-      duration: 3000,
-      opacity: 1,
-      targets: 'header .round-icon',
-      translateX: [windowWidth, 0]
-    });
-
-    // MainTitle に対するアニメーション
-    anime({
-      delay: (_, i) => {
-        return 150 * (i + 1);
-      },
-      duration: 600,
-      easing: 'easeOutExpo',
-      offset: '-=775',
-      opacity: [0, 1],
-      targets: '.letter'
-    });
-  }, []);
 
   return (
     <header>
